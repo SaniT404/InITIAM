@@ -1,0 +1,5 @@
+RewriteEngine on
+# VERSION PAGE
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /srv/log/software/index.php?id=$1 [L,QSA]

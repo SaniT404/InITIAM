@@ -1,0 +1,5 @@
+RewriteEngine on
+# VERSION PAGE
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?([^/]+)?(/(.*)?)?$ /srv/update/index.php?id=$1&service=$2&version=$4 [L,QSA]
